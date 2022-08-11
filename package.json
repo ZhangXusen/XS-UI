@@ -1,0 +1,35 @@
+{
+  "name": "elements-plus-plus",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vue-tsc --noEmit && vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "@element-plus/icons-vue": "^2.0.6",
+    "@fullcalendar/core": "^5.11.2",
+    "@fullcalendar/daygrid": "^5.11.2",
+    "@fullcalendar/interaction": "^5.11.2",
+    "@types/lodash": "^4.14.182",
+    "@types/mockjs": "^1.0.6",
+    "axios": "^0.27.2",
+    "element-plus": "^2.2.12",
+    "lodash": "^4.17.21",
+    "mockjs": "^1.1.0",
+    "vue": "^3.2.37",
+    "vue-router": "^4.0.13",
+    "wangeditor": "^4.7.15"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-vue": "^3.0.0",
+    "@vitejs/plugin-vue-jsx": "^2.0.0",
+    "sass": "^1.54.2",
+    "sass-loader": "^13.0.2",
+    "typescript": "^4.6.4",
+    "vite": "^3.0.0",
+    "vue-tsc": "^0.38.4"
+  }
+}

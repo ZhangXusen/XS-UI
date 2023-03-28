@@ -1,0 +1,63 @@
+.badge[data-v-0b176da9] {
+  cursor: pointer;
+}
+[data-v-3846528b] .el-tabs__nav {
+  width: 100%;
+  display: flex;
+}
+[data-v-3846528b] .el-tabs__item {
+  display: flex;
+  flex: 1;
+  justify-content: center;
+  text-align: center;
+}
+.container[data-v-3846528b] {
+  display: flex;
+  align-items: center;
+  padding: 12px 20px;
+  cursor: pointer;
+}
+.container .avatar[data-v-3846528b] {
+  flex: 1;
+}
+.container[data-v-3846528b]:hover {
+  background-color: #e6f6ff;
+}
+.container .content[data-v-3846528b] {
+  flex: 3;
+}
+.container .content-time[data-v-3846528b] {
+  font-size: 12px;
+  color: #999;
+  margin-top: 5px;
+}
+.container .content-tit[data-v-3846528b] {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.actions[data-v-3846528b] {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-top: 1px solid #eee;
+}
+.actions .a-item[data-v-3846528b] {
+  height: 50px;
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+.actions .a-item[data-v-3846528b]:nth-child(1) {
+  border-right: 1px solid #eee;
+}
+.actions .a-item .a-icon[data-v-3846528b] {
+  margin-right: 4px;
+  position: relative;
+  top: 2px;
+}
+[data-v-3846528b] .el-popper {
+  padding: 0;
+}

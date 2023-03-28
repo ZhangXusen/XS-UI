@@ -1,0 +1,23 @@
+.trend[data-v-dbf65edb] {
+  display: flex;
+  align-items: center;
+}
+.trend .text[data-v-dbf65edb] {
+  font-size: 12px;
+  margin-right: 4px;
+}
+.trend .icon svg[data-v-dbf65edb] {
+  width: 1em;
+  height: 1em;
+}
+.reverse[data-v-dbf65edb] {
+  filter: invert(100%);
+}
+.trends[data-v-f60c21c7] {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.trends .trend[data-v-f60c21c7] {
+  margin-right: 10px;
+}

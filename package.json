@@ -1,0 +1,25 @@
+{
+	"name": "elements-plus-plus-docs",
+	"version": "1.0.0",
+	"description": "11",
+	"main": "index.js",
+	"scripts": {
+		"dev": "vitepress dev docs",
+		"build": "vitepress build docs",
+		"deploy": "vitepress deploy docs"
+	},
+	"keywords": [],
+	"author": "",
+	"license": "ISC",
+	"devDependencies": {
+		"vitepress": "^1.0.0-alpha.63",
+		"vue": "^3.2.47"
+	},
+	"dependencies": {
+		"@element-plus/icons": "^0.0.11",
+		"@fullcalendar/core": "^5.11.2",
+		"@fullcalendar/interaction": "^5.11.2",
+		"element-plus": "^2.2.12",
+		"elements-plus-plus": "^1.0.6"
+	}
+}

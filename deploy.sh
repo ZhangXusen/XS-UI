@@ -23,7 +23,7 @@ jobs:
           cache: npm
       - run: npm ci
       - name: Build
-        run: npm run docs:build
+        run: npm run build
       - uses: actions/configure-pages@v2
       - uses: actions/upload-pages-artifact@v1
         with:

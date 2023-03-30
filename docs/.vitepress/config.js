@@ -11,6 +11,7 @@ export default defineConfig({
 	// 		href: "/public/element-plus-logo.svg",
 	// 	},
 	// ],
+	base: "/docs/",
 	themeConfig: {
 		siteTitle: false,
 		logo: "/element-plus-logo.svg",

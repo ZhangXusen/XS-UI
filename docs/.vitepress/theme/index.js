@@ -7,9 +7,10 @@ export default {
 	...DefaultTheme,
 	async enhanceApp({ app }) {
 		app.use(ElementPlus);
+
 		if (!import.meta.env.SSR) {
 			const zxUI = await import("elements-plus-plus");
-			app.use(zxUI);
+			app.use(zxUI.default);
 		}
 	},
 };

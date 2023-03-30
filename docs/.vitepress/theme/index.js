@@ -1,13 +1,15 @@
 import DefaultTheme from "vitepress/theme";
 import ElementPlus from "element-plus";
 import "element-plus/dist/index.css";
-import zxUI from "elements-plus-plus";
 import "elements-plus-plus/style.css";
-
+// import "plugin-that-access-window-on-import";
 export default {
 	...DefaultTheme,
-	enhanceApp({ app }) {
+	async enhanceApp({ app }) {
 		app.use(ElementPlus);
-		app.use(zxUI);
+		if (!import.meta.env.SSR) {
+			const zxUI = await import("elements-plus-plus");
+			app.use(zxUI);
+		}
 	},
 };

@@ -1,7 +1,9 @@
 # 菜单
 ## 效果
 <div style="padding:1em; border:1px solid #ccc;border-radius:10px;margin-top:20px;">
+   <ClientOnly>
    <xs-chooseIcon :title="title" v-model:visible="visible" />
+   </ClientOnly>
 </div>
 
 <script setup >

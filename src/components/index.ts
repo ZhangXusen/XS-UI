@@ -5,9 +5,9 @@ import { App } from "vue";
 const components = [ChooseIcon, ChooseArea];
 
 export default {
-	install(app: App) {
-		components.map((item) => {
-			app.use(item);
-		});
-	},
+  install(app: App) {
+    components.map((item) => {
+      app.use(item);
+    });
+  },
 };

@@ -13,6 +13,12 @@
     "lib": ["ESNext", "DOM"],
     "skipLibCheck": true
   },
-  "include": ["src/**/*.ts", "src/**/*.d.ts", "src/**/*.tsx", "src/**/*.vue", "src/components/CityPicker/lib/cities.js"],
+  "include": [
+    "src/**/*.ts",
+    "src/**/*.d.ts",
+    "src/**/*.tsx",
+    "src/**/*.vue",
+    "src/components/CityPicker/lib/cities.js"
+  ],
   "references": [{ "path": "./tsconfig.node.json" }]
 }

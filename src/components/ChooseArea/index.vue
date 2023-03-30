@@ -123,4 +123,8 @@ watch(
 );
 </script>
 
-<style></style>
+<style lang="scss">
+.el-select {
+	margin-top: 10px;
+}
+</style>

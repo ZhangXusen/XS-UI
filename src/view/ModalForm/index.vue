@@ -33,7 +33,7 @@
 </template>
 
 <script setup lang="ts">
-import { ref } from "@vue/reactivity";
+import { ref } from "vue";
 import { ElMessage } from "element-plus";
 
 import { FormOptions, FormInstance } from "../../components/Form/types";

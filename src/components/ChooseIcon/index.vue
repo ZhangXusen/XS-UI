@@ -4,18 +4,18 @@
 		<el-dialog :title="title" v-model="dialogVisible">
 			<el-scrollbar>
 				<div class="container">
-				<div
-					v-for="(item, index) in Object.keys(Icons)"
-					:key="index"
-					class="icon-list"
-					 @click="copyIcon(item)"
-				>
-					<div>
-						<component :is="`el-icon-${toLine(item)}`"></component>
+					<div
+						v-for="(item, index) in Object.keys(Icons)"
+						:key="index"
+						class="icon-list"
+						@click="copyIcon(item)"
+					>
+						<div>
+							<component :is="`el-icon-${toLine(item)}`"></component>
+						</div>
+						<div class="text">{{ item }}</div>
 					</div>
-					<div class="text">{{ item }}</div>
 				</div>
-			</div>
 			</el-scrollbar>
 		</el-dialog>
 	</div>
@@ -24,10 +24,9 @@
 <script setup lang="ts">
 import * as Icons from "@element-plus/icons-vue";
 import { watch } from "@vue/runtime-core";
-import { emit } from "process";
 import { ref } from "vue";
 import { toLine } from "../../utils";
-import {useCopy} from '../../hooks/useCopy'
+import { useCopy } from "../../hooks/useCopy";
 const props = defineProps<{
 	title: string;
 	visible: boolean;
@@ -54,11 +53,11 @@ watch(
 );
 
 //复制图标
-const copyIcon=(item:string) =>{
-	let text=`<el-text-${toLine(item)} />`
+const copyIcon = (item: string) => {
+	let text = `<el-text-${toLine(item)} />`;
 	useCopy(text);
-	dialogVisible.value=false;
-}
+	dialogVisible.value = false;
+};
 </script>
 
 <style lang="scss" scoped>
@@ -86,5 +85,4 @@ svg {
 .text {
 	font-size: 14px;
 }
-
 </style>

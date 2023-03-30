@@ -1,5 +1,5 @@
 <template>
-	<CityPicker></CityPicker>
+  <CityPicker></CityPicker>
 </template>
 
 <script setup lang="ts">

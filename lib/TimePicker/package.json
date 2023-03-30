@@ -1,0 +1,8 @@
+
+	{
+		"name":"TimePicker",
+		"main":"index.umd.js",
+		"module":"index.es.js",
+		"version":"0.0.1",
+		"style":"style.css"
+	}

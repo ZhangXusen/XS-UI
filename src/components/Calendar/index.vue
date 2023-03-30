@@ -63,14 +63,14 @@ const props = defineProps({
 		default: () => [
 			{
 				title: "购物",
-				start: "2022-8-1",
-				end: "2022-8-1",
+				start: "2023-3-20",
+				end: "2023-10-10",
 				editable: true,
 			},
 			{
 				title: "玩电脑",
-				start: "2022-8-10",
-				end: "2022-8-11",
+				start: "2023-3-10",
+				end: "2023-8-11",
 			},
 		],
 	},
@@ -107,7 +107,7 @@ const renderCalendar = () => {
 			],
 			//日期点击事件
 			dateClick(info: DateClickArg) {
-				// console.log(info);
+				console.log(info);
 				emits("dateClick", info);
 			},
 			eventClick(info: EventClickArg) {

@@ -126,10 +126,10 @@
 <script setup lang="ts">
 import { ref } from "@vue/reactivity";
 import { onMounted, watch } from "@vue/runtime-core";
-import { scrollIntoView } from "element-plus/lib/utils";
+// import { scrollIntoView } from "element-plus/lib/utils";
 import city from "./lib/cities.js";
 import province from "./lib/province.json";
-import { City, Province } from "./types.ts";
+import { City, Province } from "./types";
 const emits = defineEmits(["chooseCity", "chooseProvince"]);
 //选择结果
 const result = ref<string>("请选择");

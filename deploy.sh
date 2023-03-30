@@ -1,33 +1,25 @@
-name: Deploy
-on:
-  workflow_dispatch: {}
-  push:
-    branches:
-      - docs
-jobs:
-  deploy:
-    runs-on: ubuntu-latest
-    permissions:
-      pages: write
-      id-token: write
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
-    steps:
-      - uses: actions/checkout@v3
-        with:
-          fetch-depth: 0
-      - uses: actions/setup-node@v3
-        with:
-          node-version: 16
-          cache: npm
-      - run: npm ci
-      - name: Build
-        run: npm run docs:build
-      - uses: actions/configure-pages@v2
-      - uses: actions/upload-pages-artifact@v1
-        with:
-          path: docs/.vitepress/dist
-      - name: Deploy
-        id: deployment
-        uses: actions/deploy-pages@v1
+#!/usr/bin/env sh
+
+# 忽略错误
+set -e
+
+# 构建
+npm run docs:build
+
+# 进入待发布的目录
+cd docs/.vitepress/dist
+
+# 如果是发布到自定义域名
+# echo 'www.example.com' > CNAME
+
+git init
+git add -A
+git commit -m 'deploy'
+
+# 如果部署到 https://<USERNAME>.github.io
+git push -f git@github.com:ZhangXusen/Elements-plus-plus.git master:docs
+
+# 如果是部署到 https://<USERNAME>.github.io/<REPO>
+# git push -f git@github.com:<USERNAME>/<REPO>.git master:gh-pages
+
+cd -

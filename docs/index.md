@@ -14,7 +14,7 @@ hero:
       link: /guild/quickstart
     - theme: alt
       text: 在 github 上查看
-      link: [https://github.com/ZhangXusen/Elements-plus-plus](https://zhangxusen.github.io/Elements-plus-plus/examples/ChooseIcon/)
+      link: https://zhangxusen.github.io/Elements-plus-plus/examples/ChooseIcon/
 features:
   - icon: ⚡️
     title: 化繁为简

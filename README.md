@@ -12,6 +12,13 @@ https://zhangxusen.github.io/Elements-plus-plus/
 ```
 npm install elements-plus-plus --save
 ```
+
+## 引入组件
+```
+import xsUI from "elements-plus-plus";
+app.use(xsUI);
+```
+
 ## 项目结构
 ```
 

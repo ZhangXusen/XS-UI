@@ -10,7 +10,7 @@ https://zhangxusen.github.io/Elements-plus-plus/
 
 ## npm
 ```
-npm install element-plus-plus --save
+npm install elements-plus-plus --save
 ```
 ## 项目结构
 ```

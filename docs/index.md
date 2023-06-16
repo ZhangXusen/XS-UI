@@ -11,7 +11,7 @@ hero:
   actions:
     - theme: brand
       text: 快速开始
-      link: /examples/ChooseIcon
+      link: /examples/ChooseIcon/
     - theme: alt
       text: 在 github 上查看
       link: https://github.com/ZhangXusen/Elements-plus-plus

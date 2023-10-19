@@ -31,7 +31,7 @@
 
 <script setup lang="ts">
 import * as Icons from "@element-plus/icons-vue";
-import { ref, watch } from "vue";
+import { onMounted, ref, watch } from "vue";
 import { toLine } from "../../../src/utils";
 import { useCopy } from "../../../src/hooks/useCopy";
 const props = defineProps<{
@@ -63,7 +63,9 @@ watch(
 //复制图标
 const copyIcon = (item: string) => {
 	let text = `<el-text-${toLine(item)} />`;
-	useCopy(text);
+	onMounted(() => {
+		useCopy(text);
+	});
 	dialogVisible.value = false;
 };
 </script>

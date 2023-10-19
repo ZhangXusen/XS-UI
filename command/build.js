@@ -67,6 +67,7 @@ const buildSingle = async (name) => {
 		},
 	});
 };
+
 //每个组件生成package.json
 const createPackageJson = (name) => {
 	const file = `

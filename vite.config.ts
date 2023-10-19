@@ -1,10 +1,23 @@
-import vueJsx from "@vitejs/plugin-vue-jsx";
+// vite.config.ts
+import Vue from "@vitejs/plugin-vue";
+import VueJsx from "@vitejs/plugin-vue-jsx";
+import VueMacros from "unplugin-vue-macros/vite";
 import { defineConfig } from "vite";
-import vue from "@vitejs/plugin-vue";
-// https://vitejs.dev/config/
 export default defineConfig({
-  plugins: [vue(), vueJsx()],
-  server: {
-    port: 8080,
-  },
+	plugins: [
+		VueMacros({
+			plugins: {
+				vue: Vue(),
+				vueJsx: VueJsx(),
+			},
+		}),
+	],
+	server: {
+		port: 8080,
+	},
+	resolve: {
+		alias: {
+			"@": "",
+		},
+	},
 });

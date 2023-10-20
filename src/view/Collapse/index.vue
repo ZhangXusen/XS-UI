@@ -12,7 +12,9 @@
 			><CollapseItem name="three" title="三"><div>333333333</div></CollapseItem>
 		</Collapse>
 	</div>
-	{{ openItemName }}
+	<div style="margin-top: 50px">
+		{{ openItemName }}
+	</div>
 </template>
 
 <script setup lang="ts">

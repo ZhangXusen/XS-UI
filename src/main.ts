@@ -4,7 +4,7 @@
  * @Author: 小国际
  * @Date: 2023-03-30 22:09:16
  * @LastEditors: 小国际
- * @LastEditTime: 2023-10-15 12:40:34
+ * @LastEditTime: 2023-10-20 01:01:33
  */
 import * as Icons from "@element-plus/icons-vue";
 import ElementPlus from "element-plus";
@@ -15,6 +15,14 @@ import "./mock";
 import router from "./router";
 import "./style.css";
 import { toLine } from "./utils";
+
+/* 添加fontAwesome */
+/* import the fontawesome core */
+import { library } from "@fortawesome/fontawesome-svg-core";
+/* import specific icons */
+import { fas } from "@fortawesome/free-solid-svg-icons";
+library.add(fas);
+
 const app = createApp(App);
 //全局注册图标 牺牲性能
 for (let i in Icons) {

@@ -4,7 +4,7 @@
  * @Author: 小国际
  * @Date: 2023-10-17 21:06:57
  * @LastEditors: 小国际
- * @LastEditTime: 2023-10-19 21:51:47
+ * @LastEditTime: 2023-10-20 15:33:15
 -->
 
 <template>
@@ -24,6 +24,7 @@
 			<slot name="title">
 				{{ title }}
 			</slot>
+			<Icon icon="angle-right" class="header-angle" />
 		</div>
 		<Transition name="slide" v-on="TransitionEvent">
 			<div class="xs-collapse-item__wrapper" v-show="isActive">
@@ -36,6 +37,7 @@
 </template>
 <script setup lang="ts">
 import { computed, inject } from "vue";
+import Icon from "../Icon/Icon.vue";
 import { CollapseContextKey, ItemProps } from "./type";
 defineOptions({ name: "XsCollapseItem" });
 const props = defineProps<ItemProps>();

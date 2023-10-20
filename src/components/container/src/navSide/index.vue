@@ -26,6 +26,11 @@ const data = [
 	},
 	{
 		icon: "ElementPlus",
+		name: "原生图标",
+		index: "/nativeicon",
+	},
+	{
+		icon: "ElementPlus",
 		name: "图标选择器",
 		index: "/icon",
 	},

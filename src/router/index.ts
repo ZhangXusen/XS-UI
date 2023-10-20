@@ -31,6 +31,11 @@ const routes: RouteRecordRaw[] = [
 				component: () => import("../view/Collapse/index.vue"),
 			},
 			{
+				path: "/nativeicon",
+				name: "nativeicon",
+				component: () => import("../view/Icon/index.vue"),
+			},
+			{
 				path: "/icon",
 				name: "icon",
 				component: () => import("../view/ChooseIcon/index.vue"),

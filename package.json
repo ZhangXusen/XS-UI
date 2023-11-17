@@ -23,6 +23,7 @@
 		"@fullcalendar/core": "^5.11.2",
 		"@fullcalendar/daygrid": "^5.11.2",
 		"@fullcalendar/interaction": "^5.11.2",
+		"@popperjs/core": "^2.11.8",
 		"@types/lodash": "^4.14.182",
 		"@types/lodash-es": "^4.17.10",
 		"@types/mockjs": "^1.0.6",

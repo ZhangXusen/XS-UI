@@ -8,6 +8,7 @@
 	<div class="">
 		<Icon icon="fa-solid fa-user-secret" size="lg"></Icon>
 		<Icon icon="fa-solid fa-user-secret" size="lg" type="danger"></Icon>
+		<Icon icon="fa-solid fa-user-secret" size="lg" type="primary"></Icon>
 	</div>
 </template>
 

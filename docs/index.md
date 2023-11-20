@@ -1,20 +1,24 @@
 ---
 layout: home
 
+title: XS-UI
+titleTemplate: XS-UI Components Library
+
 hero:
-  name: Element-plus-plus
-  text: 基于Element-plus二次封装
-  tagline: 一个高扩展，便捷使用的二次封装化组件库
+  name: Vue-XS-UI
+  text: XS UI组件库
+  tagline: 一个基于 Vue3 + TS + Vite 开发的高扩展，便捷使用的组件库
   image:
-    src: https://element-plus.gitee.io/images/element-plus-logo.svg
-    alt: element-plus-plus 
+    src: ./amazing-logo.svg
+    alt: XS-UI 
   actions:
     - theme: brand
       text: 快速开始
-      link: /guild/quickstart
+      link: /guild/installation
     - theme: alt
-      text: 在 github 上查看
-      link: https://github.com/ZhangXusen/Elements-plus-plus
+      text: 在 Github 上查看
+      link: https://github.com/ZhangXusen/XS-UI
+
 features:
   - icon: ⚡️
     title: 化繁为简
@@ -23,6 +27,6 @@ features:
     title: 高扩展性
     details: 全新api设计，支持高度自定义
   - icon: 🛠️
-    title: 覆盖全面
-    details:  涵盖基础组件，通用组件，业务组件
+    title: 开箱即用
+    details:  涵盖10+常用基础组件，12+业务组件
 ---

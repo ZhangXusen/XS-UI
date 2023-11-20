@@ -13,6 +13,8 @@
 	"author": "",
 	"license": "ISC",
 	"devDependencies": {
+		"@vitejs/plugin-vue-jsx": "^3.1.0",
+		"unplugin-vue-macros": "^2.7.0",
 		"vitepress": "^1.0.0-alpha.63",
 		"vue": "^3.2.47"
 	},
@@ -20,6 +22,8 @@
 		"@element-plus/icons": "^0.0.11",
 		"@fullcalendar/core": "^5.11.2",
 		"@fullcalendar/interaction": "^5.11.2",
+		"@vitepress-demo-preview/component": "^2.3.2",
+		"@vitepress-demo-preview/plugin": "^1.2.2",
 		"element-plus": "^2.2.12",
 		"elements-plus-plus": "^1.0.6"
 	}

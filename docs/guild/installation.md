@@ -1,4 +1,18 @@
+<!--
+ * @Description: 
+ * @Version: 1.0
+ * @Author: 小国际
+ * @Date: 2023-03-29 22:11:11
+ * @LastEditors: 小国际
+ * @LastEditTime: 2023-11-20 18:09:22
+-->
 # 安装
+
+## 简要介绍
+
+- 该组件库采用 `Vue3` + `TypeScript` + `Vite` + `SASS`+ `Element-Plus` 实现！
+- 涵盖10+常用基础组件，基于Element-Plus封装12+业务组件
+- 开箱即用！
 
 ## 环境支持
 
@@ -6,7 +20,7 @@
 
 ## 版本
 
-Element-Plus-Plus 目前还在开发迭代中
+本组件库目前还在开发迭代中
 
 ## 使用包管理器
 
@@ -18,16 +32,19 @@ Element-Plus-Plus 目前还在开发迭代中
 ```shell
 $ npm install element-plus-plus --save
 ```
-
 ## Yarn
 ```sh
 $ yarn add element-plus-plus
 ```
-
 ## pnpm
 ```sh
 $ pnpm install element-plus-plus
 ```
+
+## 使用方式
+
+- 全局引入并注册所有组件
+- 按需引入并注册部分组件
 
 ## 浏览器直接引入
 

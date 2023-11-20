@@ -1,41 +1,91 @@
+import {
+	componentPreview,
+	containerPreview,
+} from "@vitepress-demo-preview/plugin";
 import { defineConfig } from "vitepress";
-
 export default defineConfig({
-	title: "Element-plus-plus",
+	title: "XS-UI",
 	description: "一个高扩展，便捷使用的二次封装化组件库",
-	// head: [
-	// 	"link",
-	// 	{
-	// 		rel: "icon",
-	// 		type: "image/svg+xml",
-	// 		href: "/public/element-plus-logo.svg",
-	// 	},
-	// ],
-	base: "/Elements-plus-plus/",
+	vite: {
+		plugins: [
+			// VueMacros.vite({
+			// 	setupComponent: false,
+			// 	setupSFC: false,
+			// 	plugins: {
+			// 		vueJsx: vueJsx(),
+			// 	},
+			// }),
+		],
+	},
+	head: [
+		[
+			"link",
+			{
+				rel: "icon",
+				type: "image/svg+xml",
+				href: "https://cn.vitejs.dev/viteconf.svg",
+			},
+		],
+	],
+	markdown: {
+		config(md) {
+			md.use(containerPreview);
+			md.use(componentPreview);
+		},
+	},
+	base: "/XS-UI/",
+	appearance: true,
 	themeConfig: {
-		siteTitle: false,
-		logo: "/element-plus-logo.svg",
-		description: "",
+		siteTitle: "XS-UI",
+		logo: "/amazing-icon.svg",
 		nav: [
 			{
 				text: "指南",
 				link: "/guild/installation",
 			},
 			{
-				text: "组件",
-				link: "/examples/ChooseArea/",
+				text: "业务组件",
+				link: "/examples/ChooseIcon/",
+			},
+			{
+				text: "基础组件",
+				link: "/components/ChooseIcon/",
+			},
+			{
+				text: "链接",
+				items: [
+					{ text: "My Github", link: "https://github.com/ZhangXusen" },
+					{ text: "My Blog", link: "https://juejin.cn/user/4836773602814" },
+					{
+						items: [
+							{
+								text: "Vue",
+								link: "https://cn.vuejs.org/",
+							},
+							{
+								text: "Vitepress",
+								link: "https://vitepress.dev/",
+							},
+							{
+								text: "Markdown",
+								link: "https://markdown.com.cn/",
+							},
+						],
+					},
+				],
 			},
 		],
 		socialLinks: [
 			{
 				icon: "github",
-				link: "https://github.com/ZhangXusen/Elements-plus-plus",
+				link: "https://github.com/ZhangXusen/XS-UI",
 			},
 		],
+
 		sidebar: {
 			"/guild/": [
 				{
-					text: "基础",
+					text: "指引",
 					items: [
 						{
 							text: "安装",
@@ -50,7 +100,7 @@ export default defineConfig({
 			],
 			"/examples/": [
 				{
-					text: "基础组件",
+					text: "业务组件",
 					items: [
 						{
 							text: "图标选择器",
@@ -99,6 +149,17 @@ export default defineConfig({
 						{
 							text: "日历",
 							link: "/examples/Calendar/",
+						},
+					],
+				},
+			],
+			"/components/": [
+				{
+					text: "基础组件",
+					items: [
+						{
+							text: "图标选择器",
+							link: "/components/ChooseIcon/",
 						},
 					],
 				},

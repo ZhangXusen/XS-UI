@@ -20,7 +20,7 @@ import { omit } from "lodash";
 import { computed } from "vue";
 import { IconProps } from "./type";
 
-defineOptions({ name: "XsIcon", inheritAttrs: false });
+defineOptions({ name: "XsIcon" });
 const props = defineProps<IconProps>();
 const filtersProps = computed(() => omit(props, ["type", "color"]));
 /* 自定义color */

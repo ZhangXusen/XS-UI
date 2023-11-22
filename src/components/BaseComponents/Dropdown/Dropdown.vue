@@ -33,7 +33,7 @@
 
 <script setup lang="ts">
 import { ref } from "vue";
-import RenderVNode from "../Common/RenderVNode";
+import { RenderVNode } from "../Common/RenderVNode";
 import Tooltip from "../Tooltips/Tooltip.vue";
 import { DropdownEmits, DropdownProps, MenuOptions } from "./type";
 

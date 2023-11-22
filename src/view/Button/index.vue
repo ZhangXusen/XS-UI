@@ -4,16 +4,17 @@
  * @Author: 小国际
  * @Date: 2023-10-10 20:10:29
  * @LastEditors: 小国际
- * @LastEditTime: 2023-11-13 23:18:26
+ * @LastEditTime: 2023-11-22 22:48:59
 -->
 <script setup lang="ts">
-import { h, onMounted, ref } from "vue";
+import { h, onMounted, ref, watch } from "vue";
 import Button from "../../components/BaseComponents/Button/Button.vue";
 import { ButtonInstance } from "../../components/BaseComponents/Button/type";
 import Dropdown from "../../components/BaseComponents/Dropdown/Dropdown.vue";
 import Icon from "../../components/BaseComponents/Icon/Icon.vue";
+import Input from "../../components/BaseComponents/Input/Input.vue";
+import { createMessage } from "../../components/BaseComponents/Message/method";
 import Tooltip from "../../components/BaseComponents/Tooltips";
-
 const buttonRef = ref<ButtonInstance | null>(null);
 const menuOptions = [
 	{ label: "11111", key: 1 },
@@ -25,9 +26,48 @@ const menuOptions = [
 ];
 onMounted(() => {
 	if (buttonRef.value) {
-		console.log(buttonRef);
+		// console.log(buttonRef);
 	}
+	createMessage({
+		message: "000000",
+		duration: 0,
+		showClose: true,
+		type: "danger",
+	});
+	createMessage({
+		message: "3秒后消失：鼠标悬浮不消失",
+		duration: 3000,
+		type: "success",
+	});
+	createMessage({
+		message: "哈哈哈哈",
+		duration: 0,
+		type: "info",
+	});
+	createMessage({
+		message: "哈哈哈哈",
+		duration: 0,
+		type: "warning",
+	});
+	createMessage({
+		message: "哈哈哈哈",
+		duration: 0,
+		type: "success",
+	});
+	const instance = createMessage({ message: "3秒后手动控制消失", duration: 0 });
+	setTimeout(() => {
+		instance.destroy();
+	}, 3000);
 });
+
+const InputVal = ref("");
+watch(
+	() => InputVal.value,
+	(newVal) => {
+		console.log(newVal);
+	}
+);
+/* 函数式生成Message */
 </script>
 <template>
 	<div class="">
@@ -110,6 +150,9 @@ onMounted(() => {
 		<Dropdown placement="bottom" trigger="click" :menu-options="menuOptions">
 			<Button>Dropdown</Button>
 		</Dropdown>
+	</div>
+	<div style="margin-top: 10px">
+		<Input v-model="InputVal" clearable show-password />
 	</div>
 </template>
 

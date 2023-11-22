@@ -4,12 +4,12 @@
  * @Author: 小国际
  * @Date: 2023-10-15 12:45:42
  * @LastEditors: 小国际
- * @LastEditTime: 2023-11-13 22:31:12
+ * @LastEditTime: 2023-11-18 20:14:51
  */
 /* eslint-env node */
 module.exports = {
 	plugins: [
-		require("postcss-each-variables"),
+		// require("postcss-each-variables"),
 		require("postcss-nested"),
 		require("postcss-each")({
 			plugins: {

@@ -32,8 +32,8 @@
 					:value="modelValue"
 					@input="handleInput"
 					@change="handleChange"
-					@focus="isFocus = true"
-					@blur="isFocus = false"
+					@focus="handleFocus"
+					@blur="handleBlur"
 					:autocomplete="autocomplete"
 					:autofocus="autofocus"
 					:placeholder="placeholder"
@@ -81,8 +81,9 @@
 				:disabled="disabled"
 				:value="modelValue"
 				@input="handleInput"
-				@focus="isFocus = true"
-				@blur="isFocus = false"
+				@focus="handleFocus"
+				@blur="handleBlur"
+				@change="handleChange"
 				:autocomplete="autocomplete"
 				:autofocus="autofocus"
 				:placeholder="placeholder"
@@ -98,14 +99,17 @@
 import { Ref, computed, nextTick, ref } from "vue";
 import Icon from "../Icon/Icon.vue";
 import { InputEmits, InputProps } from "./type";
-defineOptions({ name: "XsInput" });
+defineOptions({ name: "XsInput", inheritAttrs: false });
 const props = withDefaults(defineProps<InputProps>(), {
 	type: "text",
 	autocomplete: "off",
 });
 const emits = defineEmits<InputEmits>();
 const InputRef = ref(null) as Ref<HTMLInputElement>;
-// const innerValue = ref(props.modelValue);
+const isFocus = ref(false);
+/* 密码的显示与隐藏 */
+const isPasswordVisible = ref(false);
+
 const handleInput = (e) => {
 	emits("update:modelValue", e.target.value);
 	emits("input", e.target.value);
@@ -113,20 +117,11 @@ const handleInput = (e) => {
 const handleChange = (e) => {
 	emits("change", e.target.value);
 };
-// watch(
-// 	() => props.modelValue,
-// 	(newVal) => {
-// 		innerValue.value = newVal;
-// 	}
-// );
-
-const isFocus = ref(false);
 /* 处理聚焦 */
 const handleFocus = (e: FocusEvent) => {
 	isFocus.value = true;
 	emits("focus", e);
 };
-
 /* 处理失焦 */
 const handleBlur = (e: FocusEvent) => {
 	isFocus.value = false;
@@ -143,15 +138,13 @@ const showClear = computed(() => {
 	);
 });
 const clear = (e) => {
-	console.log("clear");
+	// console.log("clear");
 	emits("update:modelValue", "");
 	emits("clear");
 	emits("input", "");
 	emits("change", "");
 };
 
-/* 密码的显示与隐藏 */
-const isPasswordVisible = ref(false);
 /* 点击suffix后继续聚焦input */
 const keepFocus = async () => {
 	await nextTick();
@@ -160,6 +153,11 @@ const keepFocus = async () => {
 
 defineExpose({
 	ref: InputRef,
+	handleFocus,
+	handleBlur,
+	handleInput,
+	handleChange,
+	clear,
 });
 </script>
 

@@ -4,7 +4,7 @@
  * @Author: 小国际
  * @Date: 2023-10-10 20:10:29
  * @LastEditors: 小国际
- * @LastEditTime: 2023-11-22 22:48:59
+ * @LastEditTime: 2023-11-23 23:08:52
 -->
 <script setup lang="ts">
 import { h, onMounted, ref, watch } from "vue";
@@ -14,6 +14,7 @@ import Dropdown from "../../components/BaseComponents/Dropdown/Dropdown.vue";
 import Icon from "../../components/BaseComponents/Icon/Icon.vue";
 import Input from "../../components/BaseComponents/Input/Input.vue";
 import { createMessage } from "../../components/BaseComponents/Message/method";
+import Switch from "../../components/BaseComponents/Switch/Switch.vue";
 import Tooltip from "../../components/BaseComponents/Tooltips";
 const buttonRef = ref<ButtonInstance | null>(null);
 const menuOptions = [
@@ -67,6 +68,7 @@ watch(
 		console.log(newVal);
 	}
 );
+const switchVisible = ref(true);
 /* 函数式生成Message */
 </script>
 <template>
@@ -153,6 +155,10 @@ watch(
 	</div>
 	<div style="margin-top: 10px">
 		<Input v-model="InputVal" clearable show-password />
+	</div>
+	<div style="margin-top: 10px">
+		<Switch v-model="switchVisible" size="large" />
+		<div>modelValue:{{ switchVisible }}</div>
 	</div>
 </template>
 

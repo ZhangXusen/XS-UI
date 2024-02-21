@@ -4,7 +4,7 @@
  * @Author: 小国际
  * @Date: 2023-11-12 21:10:55
  * @LastEditors: 小国际
- * @LastEditTime: 2023-11-13 22:47:05
+ * @LastEditTime: 2023-12-04 22:47:46
 -->
 <template>
 	<div class="xs-tooltip" ref="tooltipRef">
@@ -22,17 +22,20 @@
 
 <script setup lang="ts">
 import { Instance, createPopper } from "@popperjs/core";
+import { debounce } from "lodash";
 import { computed, onUnmounted, reactive, ref, watch } from "vue";
 import { useClickOutside } from "../../../hooks/useClickOutside";
-import { TooltipProps } from "./type";
+import type { ToolTipEmit, TooltipInstance, TooltipProps } from "./type";
 defineOptions({
 	name: "XsTooltip",
 });
 const props = withDefaults(defineProps<TooltipProps>(), {
 	placement: "bottom",
 	trigger: "hover",
+	openDelay: 0,
+	closeDelay: 0,
 });
-const emit = defineEmits();
+const emit = defineEmits<ToolTipEmit>();
 const triggerRef = ref<HTMLElement>();
 const popperRef = ref<HTMLElement>();
 const tooltipRef = ref<HTMLElement>();
@@ -51,8 +54,11 @@ const popperOptions = computed(() => {
 	};
 });
 useClickOutside(tooltipRef, () => {
-	if (props.trigger === "click" && isOpen.value) {
-		isOpen.value = false;
+	if (props.trigger === "click" && isOpen.value && !props.manual) {
+		close();
+	}
+	if (isOpen.value) {
+		emit("click-outside", true);
 	}
 });
 const isOpen = ref(false);
@@ -64,17 +70,33 @@ let events: Record<string, any> = reactive({});
 togglePopper:trigger为click时所触发的函数
 open:hover时mouseenter,mouseleave所触发的函数
 */
-const togglePopper = () => {
-	isOpen.value = !isOpen.value;
-	emit("visible-change", isOpen.value);
-};
+const debounceOpen = debounce(() => {
+	setTimeout(() => {
+		isOpen.value = true;
+		emit("visible-change", true);
+	}, props.openDelay);
+}, props.openDelay);
+const debounceClose = debounce(() => {
+	setTimeout(() => {
+		isOpen.value = false;
+		emit("visible-change", false);
+	}, props.closeDelay);
+}, props.closeDelay);
+
 const open = () => {
-	isOpen.value = true;
-	emit("visible-change", true);
+	debounceClose.cancel();
+	debounceOpen();
 };
 const close = () => {
-	isOpen.value = false;
-	emit("visible-change", false);
+	debounceOpen.cancel();
+	debounceClose();
+};
+const togglePopper = () => {
+	if (isOpen.value) {
+		close();
+	} else {
+		open();
+	}
 };
 const bindEvent = () => {
 	if (props.trigger === "hover") {
@@ -116,7 +138,10 @@ onUnmounted(() => {
 	popperInstance?.destroy();
 });
 
-defineExpose({});
+defineExpose<TooltipInstance>({
+	show: open,
+	hide: close,
+});
 </script>
 
 <style scoped lang="scss">

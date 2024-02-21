@@ -4,7 +4,7 @@
  * @Author: 小国际
  * @Date: 2023-10-10 20:10:29
  * @LastEditors: 小国际
- * @LastEditTime: 2023-11-23 23:08:52
+ * @LastEditTime: 2023-12-05 21:36:22
 -->
 <script setup lang="ts">
 import { h, onMounted, ref, watch } from "vue";
@@ -14,8 +14,10 @@ import Dropdown from "../../components/BaseComponents/Dropdown/Dropdown.vue";
 import Icon from "../../components/BaseComponents/Icon/Icon.vue";
 import Input from "../../components/BaseComponents/Input/Input.vue";
 import { createMessage } from "../../components/BaseComponents/Message/method";
+import Select from "../../components/BaseComponents/Select/Select.vue";
 import Switch from "../../components/BaseComponents/Switch/Switch.vue";
 import Tooltip from "../../components/BaseComponents/Tooltips";
+
 const buttonRef = ref<ButtonInstance | null>(null);
 const menuOptions = [
 	{ label: "11111", key: 1 },
@@ -69,7 +71,35 @@ watch(
 	}
 );
 const switchVisible = ref(true);
-/* 函数式生成Message */
+/* select */
+const select = ref("1");
+const selectOption = [
+	{ label: "hello", value: "1" },
+	{ label: "xyz", value: "2" },
+	{ label: "testing", value: "3" },
+	{ label: "check", value: "4", disabled: true },
+];
+const customRender = (option) => {
+	return h("div", { className: "xyz" }, [
+		h("b", option.label),
+		h("span", option.value),
+	]);
+};
+
+const select1 = ref();
+function HandlerSearch(query: string) {
+	if (!query) return Promise.resolve([]);
+	return fetch(`https://api.github.com/search/repositories?q=${query}`)
+		.then((res) => res.json())
+		.then(({ items }) => {
+			return items.slice(0, 10).map((item) => {
+				return {
+					label: item.name,
+					value: item.node_id,
+				};
+			});
+		});
+}
 </script>
 <template>
 	<div class="">
@@ -159,6 +189,29 @@ const switchVisible = ref(true);
 	<div style="margin-top: 10px">
 		<Switch v-model="switchVisible" size="large" />
 		<div>modelValue:{{ switchVisible }}</div>
+	</div>
+	<div style="margin-top: 10px">
+		<Select
+			v-model="select"
+			:options="selectOption"
+			placeholder="请选择..."
+			clearable></Select>
+		<Select
+			v-model="select"
+			:options="selectOption"
+			placeholder="请选择..."
+			:render-label="customRender"
+			clearable
+			filterable></Select>
+
+		<Select
+			v-model="select1"
+			placeholder="请选择..."
+			clearable
+			filterable
+			remote
+			:remote-method="HandlerSearch">
+		</Select>
 	</div>
 </template>
 

@@ -1,0 +1,8 @@
+{
+  "*.{js,jsx,ts,tsx}": [
+  ],
+  "*.vue": [
+  ],
+  "*.{css,scss,html}": [
+  ]
+}

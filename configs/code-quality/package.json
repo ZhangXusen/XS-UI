@@ -1,0 +1,10 @@
+{
+  "name": "@element-plus-plus/code-quality",
+  "version": "1.0.0",
+  "description": "配置文件",
+  "files": [],
+  "main": "index.js",
+  "scripts": {
+    "clean": "rimraf node_modules"
+  }
+}

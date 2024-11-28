@@ -1,48 +1,56 @@
 {
-	"compilerOptions": {
-		"target": "ESNext",
-		"useDefineForClassFields": true,
-		"module": "ESNext",
-		"moduleResolution": "Node",
-		"strict": false,
-		"jsx": "preserve",
-		"sourceMap": true,
-		"resolveJsonModule": true,
-		"isolatedModules": true,
-		"esModuleInterop": true,
-		"lib": ["ESNext", "DOM"],
-		"skipLibCheck": true,
-		"types": ["unplugin-vue-macros/macros-global" /* ... */]
-	},
-	"include": [
-		"src/**/*.ts",
-		"src/**/*.d.ts",
-		"src/**/*.tsx",
-		"src/**/*.vue",
-		"src/components/CityPicker/lib/cities.js"
-	],
-	"vueCompilerOptions": {
-		"plugins": [
-			"@vue-macros/volar/define-options",
-			"@vue-macros/volar/define-models",
-			"@vue-macros/volar/define-props",
-			"@vue-macros/volar/define-props-refs",
-			"@vue-macros/volar/short-vmodel",
-			"@vue-macros/volar/define-slots",
-			"@vue-macros/volar/jsx-directive"
-		],
-		"vueMacros": {
-			"exportExpose": {
-				"include": ["**/export-expose/**"]
-			},
-			"exportProps": {
-				"include": ["**/export-props/**"]
-			},
-			"exportRender": {
-				"include": ["**/export-render/**"]
-			}
-		}
-		// ...
-	},
-	"references": [{ "path": "./tsconfig.node.json" }]
+  "compilerOptions": {
+    "target": "ESNext",
+    "useDefineForClassFields": true,
+    "module": "ESNext",
+    "moduleResolution": "Node",
+    "strict": false,
+    "jsx": "preserve",
+    "sourceMap": true,
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "esModuleInterop": true,
+    "lib": ["ESNext", "DOM"],
+    "skipLibCheck": true,
+    "types": [
+      "unplugin-vue-macros/macros-global"
+      /* ... */
+    ]
+  },
+  "include": [
+    "**/*.ts",
+    "**/*.d.ts",
+    "**/*.tsx",
+    "**/*.vue",
+    "src/components/CityPicker/lib/cities.js"
+  ],
+  "exclude": ["node_modules", "**/dist", "**/*.md"],
+  "vueCompilerOptions": {
+    "plugins": [
+      "@vue-macros/volar/define-options",
+      "@vue-macros/volar/define-models",
+      "@vue-macros/volar/define-props",
+      "@vue-macros/volar/define-props-refs",
+      "@vue-macros/volar/short-vmodel",
+      "@vue-macros/volar/define-slots",
+      "@vue-macros/volar/jsx-directive"
+    ],
+    "vueMacros": {
+      "exportExpose": {
+        "include": ["**/export-expose/**"]
+      },
+      "exportProps": {
+        "include": ["**/export-props/**"]
+      },
+      "exportRender": {
+        "include": ["**/export-render/**"]
+      }
+    }
+    // ...
+  },
+  "references": [
+    {
+      "path": "./tsconfig.node.json"
+    }
+  ]
 }

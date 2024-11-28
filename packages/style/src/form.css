@@ -1,0 +1,53 @@
+.xs-form {
+  --xs-form-label-font-size: var(--xs-font-size-base);
+  --xs-form-content-font-size: var(--xs-font-size-base);
+}
+
+.xs-form-item {
+  display: flex;
+  margin-bottom: 18px;
+
+  .xs-form-item__label {
+    width: 150px;
+    height: 32px;
+    line-height: 32px;
+    padding: 0 12px 0 0;
+    box-sizing: border-box;
+    /*右对齐*/
+    display: inline-flex;
+    justify-content: flex-end;
+    font-size: var(--xs-form-label-font-size);
+    color: var(--xs-text-color-regular);
+
+    .xs-form-item__content {
+      display: flex;
+      flex-wrap: wrap;
+      flex: 1;
+      line-height: 32px;
+      font-size: var(--xs-form-content-font-size);
+      min-width: 0;
+      position: relative;
+    }
+
+    .xs-form-item__error-msg {
+      position: absolute;
+      top: 100%;
+      left: 0;
+      padding-top: 12px;
+      color: var(--xs-color-danger);
+    }
+  }
+}
+
+.xs-form-item.is-error .xs-input__wrapper {
+  box-shadow: 0 0 0 1px var(--xs-color-danger) inset;
+}
+
+.xs-form-item.is-success .xs-input__wrapper {
+  box-shadow: 0 0 0 1px var(--xs-color-success) inset;
+}
+
+.xs-form-item.is-required > .xs-form-item__label::before {
+  content: "*";
+  color: var(--xs-color-danger);
+}

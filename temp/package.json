@@ -1,18 +1,18 @@
 {
-	"name": "elements-plus-plus",
-	"version": "1.0.4",
-	"main": "index.umd.js",
-	"module": "index.es.js",
-	"types": "index.d.ts",
-	"author": {
-		"name": "ZhangXusen"
-	},
-	"keywords": [
-		"elements-plus-plus",
-		"elements-plus",
-		"封装组件",
-		"二次封装",
-		"vue",
-		"components"
-	]
+  "name": "elements-plus-plus",
+  "version": "1.0.4",
+  "main": "index.umd.js",
+  "module": "index.es.js",
+  "types": "index.d.ts",
+  "author": {
+    "name": "ZhangXusen"
+  },
+  "keywords": [
+    "elements-plus-plus",
+    "elements-plus",
+    "封装组件",
+    "二次封装",
+    "vue",
+    "components"
+  ]
 }

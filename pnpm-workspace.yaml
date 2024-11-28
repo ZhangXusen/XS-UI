@@ -1,0 +1,7 @@
+packages:
+  - packages/* #共享组件
+  - docs #组件文档
+  - play #预览
+  - internal/*
+  - configs
+  - command

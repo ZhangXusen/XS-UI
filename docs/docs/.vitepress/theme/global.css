@@ -1,0 +1,358 @@
+/**
+ * Colors
+ * -------------------------------------------------------------------------- */
+
+:root {
+  --vp-c-brand: #646cff;
+  --vp-c-brand-light: #747bff;
+  --vp-c-brand-lighter: #9499ff;
+  --vp-c-brand-lightest: #bcc0ff;
+  --vp-c-brand-dark: #535bf2;
+  --vp-c-brand-darker: #454ce1;
+  --vp-c-brand-dimm: rgba(100, 108, 255, 0.08);
+  --c-brand: #646cff;
+  --c-brand-light: #747bff;
+}
+
+/**
+ * Component: Button
+ * -------------------------------------------------------------------------- */
+
+:root {
+  --vp-button-brand-border: var(--vp-c-brand-light);
+  --vp-button-brand-text: var(--vp-c-white);
+  --vp-button-brand-bg: var(--vp-c-brand);
+  --vp-button-brand-hover-border: var(--vp-c-brand-light);
+  --vp-button-brand-hover-text: var(--vp-c-white);
+  --vp-button-brand-hover-bg: var(--vp-c-brand-light);
+  --vp-button-brand-active-border: var(--vp-c-brand-light);
+  --vp-button-brand-active-text: var(--vp-c-white);
+  --vp-button-brand-active-bg: var(--vp-button-brand-bg);
+}
+
+/**
+ * Component: Home
+ * -------------------------------------------------------------------------- */
+
+:root {
+  --vp-home-hero-name-color: transparent;
+  --vp-home-hero-name-background: -webkit-linear-gradient(
+    120deg,
+    #bd34fe 30%,
+    #41d1ff
+  );
+
+  --vp-home-hero-image-background-image: linear-gradient(
+    -45deg,
+    #bd34fe 50%,
+    #47caff 50%
+  );
+  --vp-home-hero-image-filter: blur(40px);
+}
+
+@media (min-width: 640px) {
+  :root {
+    --vp-home-hero-image-filter: blur(56px);
+  }
+}
+
+@media (min-width: 960px) {
+  :root {
+    --vp-home-hero-image-filter: blur(72px);
+  }
+}
+
+/**
+ * Component: Custom Block
+ * -------------------------------------------------------------------------- */
+
+:root {
+  --vp-custom-block-tip-border: var(--vp-c-brand);
+  --vp-custom-block-tip-text: var(--vp-c-brand-darker);
+  --vp-custom-block-tip-bg: var(--vp-c-brand-dimm);
+}
+
+.dark {
+  --vp-custom-block-tip-border: var(--vp-c-brand);
+  --vp-custom-block-tip-text: var(--vp-c-brand-lightest);
+  --vp-custom-block-tip-bg: var(--vp-c-brand-dimm);
+}
+
+/**
+ * Component: Algolia
+ * -------------------------------------------------------------------------- */
+
+.DocSearch {
+  --docsearch-primary-color: var(--vp-c-brand) !important;
+}
+
+/**
+ * VitePress: Custom fix
+ * -------------------------------------------------------------------------- */
+
+/*
+  Use lighter colors for links in dark mode for a11y.
+  Also specify some classes twice to have higher specificity
+  over scoped class data attribute.
+*/
+.dark .vp-doc a,
+.dark .vp-doc a > code,
+.dark .VPNavBarMenuLink.VPNavBarMenuLink:hover,
+.dark .VPNavBarMenuLink.VPNavBarMenuLink.active,
+.dark .link.link:hover,
+.dark .link.link.active,
+.dark .edit-link-button.edit-link-button,
+.dark .pager-link .title {
+  color: var(--vp-c-brand-lighter);
+}
+
+.dark .vp-doc a:hover,
+.dark .vp-doc a > code:hover {
+  color: var(--vp-c-brand-lightest);
+  opacity: 1;
+}
+.vp-doc a {
+  font-weight: normal;
+  text-decoration: none;
+}
+.vp-doc p {
+  margin: 0;
+}
+/* Transition by color instead of opacity */
+.dark .vp-doc .custom-block a {
+  transition: color 0.25s;
+}
+strong {
+  color: #00c1d4;
+}
+blockquote {
+  padding: 0 12px;
+  font-weight: 600;
+  border-left: 3px solid #6ee7b7 !important;
+  border-right: 3px solid #6ee7b7;
+  border-radius: 6px;
+}
+a:hover {
+  text-decoration: none !important;
+}
+summary {
+  font-weight: 600;
+}
+svg {
+  fill: var(--vp-c-text-1);
+}
+h1 {
+  // h1 标签渐变色文本
+  display: inline-block;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: #0000;
+  white-space: nowrap;
+  background-image: linear-gradient(to right, #09c8ce, #eb2f96);
+  margin-bottom: 20px;
+}
+.VPHero {
+}
+.VPHero .name,
+.text,
+.tagline {
+  transition: transform 0.3s cubic-bezier(0.18, 0.89, 0.32, 1.28);
+  transform-origin: 0% 50%;
+}
+.text {
+  color: var(--vp-c-text-1);
+}
+.image-src {
+  transition: transform 0.5s cubic-bezier(0.18, 0.89, 0.32, 1.28);
+}
+.VPHero .Layout {
+  position: relative;
+}
+
+.VPFooter {
+  position: absolute;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  border: none;
+  background-color: transparent;
+  text-align: center;
+  padding: 24px 32px;
+}
+.Layout .VPFooter .container {
+  display: inline-block;
+  transition: all 0.25s cubic-bezier(0.18, 0.89, 0.32, 1.28);
+}
+.VPFooter .message,
+.copyright {
+  color: var(--vp-c-text-1);
+}
+.message .copyright:hover {
+  transform: scale(1.25);
+}
+.message .copyright:hover .message,
+.copyright {
+  font-weight: 600;
+}
+.VPNavBar.fill:not(.has-sidebar) {
+  border: none !important;
+  background-color: transparent !important;
+}
+.VPNavBar:not(.has-sidebar):not(.top) {
+  border: none;
+  background-color: transparent !important;
+}
+.VPNavBar {
+}
+.VPNavBar .curtain {
+  display: none;
+}
+.VPNavBar .content-body {
+  pointer-events: none;
+  border: none;
+  background-color: transparent !important;
+}
+.VPNavBar .VPNavBarSearch {
+  pointer-events: none;
+}
+.VPNavBarTitle .title {
+  transition: all 0.25s cubic-bezier(0.18, 0.89, 0.32, 1.28);
+}
+.VPNavBarTitle .title .VPImage {
+  transition: transform 0.5s cubic-bezier(0.18, 0.89, 0.32, 1.28);
+}
+.VPNavBarTitle .title:hover {
+  transform: scale(1.1);
+  color: #bd34fe;
+}
+.VPNavBarTitle .title:hover .VPImage {
+  transform: scale(1.25);
+}
+.VPButton {
+  border-color: transparent !important;
+  border-radius: 12px !important;
+}
+.VPButton.brand {
+  font-weight: 700;
+  border: none;
+  background: linear-gradient(to right, #09c8ce, #e4c31b, #eb2f96);
+  transition: all 0.25s;
+}
+.VPButton.brand:hover {
+  background: linear-gradient(to right, #eb2f96, #09c8ce, #e4c31b);
+}
+.VPButton.alt {
+  background-color: transparent !important;
+  transition: all 0.25s;
+}
+.VPButton.alt:hover {
+  border-color: #41d1ff !important;
+  box-shadow: 0 0 3px 3px rgba(65, 209, 255, 0.12);
+}
+.VPSwitch {
+  border-color: transparent !important;
+  background-color: transparent !important;
+}
+.VPSwitch:hover {
+  border-color: #e4c31b !important;
+  box-shadow: 0 0 3px 3px rgba(228, 195, 27, 0.12);
+}
+.DocSearch-Button {
+  border-radius: 12px;
+  background-color: rgba(0, 0, 0, 0.36);
+  transition: all 0.25s cubic-bezier(0.18, 0.89, 0.32, 1.28);
+}
+.DocSearch-Button:hover {
+  transform: scale(1.1);
+  border-color: #bd34fe;
+  background-color: rgba(0, 0, 0, 0.36);
+  box-shadow: 0 0 3px 3px rgba(189, 52, 254, 0.12);
+}
+
+.DocSearch-Search-Icon,
+.DocSearch-Button-Placeholder {
+  color: #fff;
+}
+.DocSearch-Button-Key {
+  color: #fff;
+}
+.VPFeatures .container .items .item {
+  cursor: pointer;
+  transition: all 0.25s cubic-bezier(0.18, 0.89, 0.32, 1.28);
+}
+.VPFeatures .container .items .item .VPFeature {
+  border-radius: 36px;
+  border: none;
+  background-color: rgba(0, 0, 0, 0.36);
+  transition: all 0.25s;
+}
+.VPFeatures .container .items .item .VPFeature .details {
+  color: rgba(255, 255, 255, 0.88);
+}
+.VPFeatures .container .items .item .VPFeature .icon {
+  width: 72px;
+  height: 72px;
+  font-size: 20px;
+  font-weight: 700;
+  border-radius: 28px;
+  background-image: radial-gradient(circle at 0%, #f669bb, #98e8de, #ffd666);
+}
+.VPFeatures .container .items .item .VPFeature .logo {
+  width: 32px;
+  height: 32px;
+}
+.icon,
+.title,
+.details {
+  font-size: 18px;
+  color: #fff;
+  transition: all 0.25s;
+}
+.VPFeatures .container .items .item:hover {
+  transform: scale(1.2);
+  transform-origin: 50%, 50%;
+}
+.VPFeatures .VPFeature {
+  border-color: #fbdf93;
+  background: linear-gradient(to right, #09c8ce, #e4c31b, #eb2f96);
+  box-shadow: 0 6px 16px 0 rgba(0, 0, 0, 0.08),
+    0 3px 6px -4px rgba(0, 0, 0, 0.12), 0 9px 28px 8px rgba(0, 0, 0, 0.05);
+}
+.VPFeatures .VPFeature .icon {
+  background-image: radial-gradient(circle at 0%, #ffd666, #f669bb, #98e8de);
+}
+.VPLink .text {
+  transition: all 0.25s cubic-bezier(0.18, 0.89, 0.32, 1.28);
+  transform-origin: 0% 50%;
+}
+.VPLink .text:hover {
+  transform: scale(1.1);
+  font-weight: 600 !important;
+}
+.is-active .VPLink .text {
+  transform: scale(1.1) cubic-bezier(0.18, 0.89, 0.32, 1.28);
+  font-weight: 600 !important;
+}
+.pager-link {
+  border-radius: 12px !important;
+  transition: all 0.25s cubic-bezier(0.18, 0.89, 0.32, 1.28) !important;
+}
+.pager-link:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 3px 3px rgba(100, 108, 255, 0.12);
+}
+.tag-version {
+  font-size: 16px;
+  line-height: 1.5;
+  font-weight: bold;
+  padding: 4px 8px;
+  margin-left: 8px;
+  border-radius: 12px;
+  display: inline-block;
+  vertical-align: top;
+  margin-top: 2px;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: #fff;
+  background: linear-gradient(to right, #41d1ff, #c41d7f);
+}

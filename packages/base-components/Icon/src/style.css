@@ -1,0 +1,23 @@
+/*
+ * @Description: 
+ * @Version: 1.0
+ * @Author: 小国际
+ * @Date: 2023-10-20 01:09:27
+ * @LastEditors: 小国际
+ * @LastEditTime: 2023-10-20 14:37:13
+ */
+.xs-icon {
+  --xs-icon-color: inherit;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  fill: currentColor;
+  color: var(--xs-icon-color);
+  font-size: inherit;
+}
+@each $val in primary, info, success, warning, danger {
+  .xs-icon--$(val) {
+    --xs-icon-color: var(--xs-color-$(val));
+  }
+}

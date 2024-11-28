@@ -1,0 +1,20 @@
+{
+  "name": "@element-plus-plus/business-components",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.ts",
+  "scripts": {},
+  "dependencies": {
+    "@element-plus/icons-vue": "^2.1.0",
+    "wangeditor": "^4.7.15",
+    "mockjs": "^1.1.0",
+    "element-plus": "^2.4.0",
+    "@fullcalendar/core": "^5.11.2",
+    "@fullcalendar/daygrid": "^5.11.2",
+    "@fullcalendar/interaction": "^5.11.2",
+    "@element-plus-plus/utils": "workspace:*"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}

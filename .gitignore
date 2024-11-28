@@ -10,14 +10,11 @@ lerna-debug.log*
 node_modules
 dist-ssr
 *.local
+/docs/docs/.vitepress/cache
+dist
 
 # Editor directories and files
 .vscode/*
 !.vscode/extensions.json
 .idea
-.DS_Store
-*.suo
-*.ntvs*
-*.njsproj
-*.sln
-*.sw?
+

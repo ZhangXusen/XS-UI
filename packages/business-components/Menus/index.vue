@@ -7,8 +7,8 @@
         :index="item.index"
       >
         <component
-          v-if="item[icon]"
           :is="`el-icon-${toLine(item[icon])}`"
+          v-if="item[icon]"
         ></component>
         <span>{{ item[name] }}</span>
       </el-menu-item>
@@ -20,20 +20,20 @@
         <!-- 父导航的标题 -->
         <template #title>
           <component
-            v-if="item[icon]"
             :is="`el-icon-${toLine(item[icon])}`"
+            v-if="item[icon]"
           ></component>
           <span>{{ item[name] }}</span>
         </template>
         <!-- 导航栏的内容 -->
         <el-menu-item
-          :index="item1[index]"
           v-for="(item1, i1) in item[children]"
           :key="i1"
+          :index="item1[index]"
         >
           <component
-            v-if="item1[icon]"
             :is="`el-icon-${toLine(item1[icon])}`"
+            v-if="item1[icon]"
           ></component>
           <span>{{ item1[name] }}</span>
         </el-menu-item>
@@ -42,42 +42,42 @@
   </el-menu>
 </template>
 
-<script setup lang="ts">
-import { PropType } from "vue";
-import { toLine } from "../../utils/index.js";
+<script lang="ts" setup>
+import { PropType } from "vue"
+import { toLine } from "@element-plus-plus/utils"
 // import { MenuItem } from "./types.js";
 
 const props = defineProps({
   data: {
     type: Array as unknown as PropType<any[]>,
-    required: true,
+    required: true
   },
   defaultActive: {
     type: String,
-    default: "",
+    default: ""
   },
   router: {
     type: Boolean,
-    default: false,
+    default: false
   },
   //键名
   name: {
     type: String,
-    default: "name",
+    default: "name"
   },
   index: {
     type: String,
-    default: "index",
+    default: "index"
   },
   icon: {
     type: String,
-    default: "icon",
+    default: "icon"
   },
   children: {
     type: String,
-    default: "children",
-  },
-});
+    default: "children"
+  }
+})
 </script>
 
 <style></style>

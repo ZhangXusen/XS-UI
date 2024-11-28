@@ -12,21 +12,22 @@
   </div>
 </template>
 
-<script setup lang="ts">
+<script lang="ts" setup>
 //二级导航
-import Menus from "../../components/Menus/index.vue";
+// import {XsMenu as Menus} from "@element-plus-plus/business-components"
 //无限层级
-import InfiniteMenu from "../../components/Menus/menu.tsx";
+import { XsInfiniteMenu as InfiniteMenu } from "@element-plus-plus/business-components"
+
 const data1 = [
   {
     a: "导航1",
     b: "1",
-    c: "Document",
+    c: "Document"
   },
   {
     a: "导航2",
     b: "2",
-    c: "Document",
+    c: "Document"
   },
   {
     a: "导航3",
@@ -36,22 +37,22 @@ const data1 = [
       {
         a: "导航3-1",
         b: "3-1",
-        c: "Document",
-      },
-    ],
-  },
-];
+        c: "Document"
+      }
+    ]
+  }
+]
 
 const data2 = [
   {
     name: "导航1",
     index: "1",
-    icon: "Document",
+    icon: "Document"
   },
   {
     name: "导航2",
     index: "2",
-    icon: "Document",
+    icon: "Document"
   },
   {
     name: "导航3",
@@ -81,24 +82,24 @@ const data2 = [
                       {
                         name: "导航3-1-1-1-1-1",
                         index: "3-1-1-1-1-1",
-                        icon: "Document",
-                      },
-                    ],
-                  },
-                ],
-              },
-            ],
+                        icon: "Document"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
           },
           {
             name: "导航3-1-2",
             index: "3-1-2",
-            icon: "Document",
-          },
-        ],
-      },
-    ],
-  },
-];
+            icon: "Document"
+          }
+        ]
+      }
+    ]
+  }
+]
 </script>
 
 <style></style>

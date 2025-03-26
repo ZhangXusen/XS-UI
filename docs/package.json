@@ -9,23 +9,24 @@
     "deploy": "./deploy.sh",
     "docs:preview": "vitepress preview docs"
   },
+  "type": "module",
   "keywords": [],
-  "author": "",
+  "author": "zxs",
   "license": "ISC",
   "devDependencies": {
+    "@element-plus-plus/base-components": "workspace:*",
+    "@element-plus-plus/business-components": "workspace:*",
     "@vitejs/plugin-vue-jsx": "^3.1.0",
     "unplugin-vue-macros": "^2.7.0",
     "vitepress": "^1.0.0-alpha.63",
-    "vue": "^3.2.47",
-    "@element-plus-plus/business-components": "workspace:*",
-    "@element-plus-plus/base-components": "workspace:*"
+    "vue": "^3.2.47"
   },
   "dependencies": {
     "@element-plus/icons": "^0.0.11",
     "@fullcalendar/core": "^5.11.2",
     "@fullcalendar/interaction": "^5.11.2",
     "@vitepress-demo-preview/component": "^2.3.2",
-    "@vitepress-demo-preview/plugin": "^1.2.2",
+    "@vitepress-demo-preview/plugin": "^1.2.3",
     "element-plus": "^2.2.12",
     "elements-plus-plus": "^1.0.6"
   }

@@ -1,12 +1,3 @@
-<!--
- * @Description:
- * @Version: 1.0
- * @Author: 小国际
- * @Date: 2023-03-29 22:11:11
- * @LastEditors: 小国际
- * @LastEditTime: 2023-11-20 18:09:22
--->
-
 # 安装
 
 ## 简要介绍
@@ -54,4 +45,4 @@ $ pnpm install element-plus-plus
 
 ## 浏览器直接引入
 
-暂不支持
+暂未提供支持

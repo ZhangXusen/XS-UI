@@ -1,35 +1,55 @@
 {
-  "hash": "8f4cc1aa",
-  "browserHash": "e2ca1bc8",
+  "hash": "e604d039",
+  "configHash": "8a417c23",
+  "lockfileHash": "8ee53a31",
+  "browserHash": "4e929728",
   "optimized": {
     "vue": {
-      "src": "../../../../node_modules/vue/dist/vue.runtime.esm-bundler.js",
+      "src": "../../../../../node_modules/.pnpm/vue@3.5.13_typescript@4.9.5/node_modules/vue/dist/vue.runtime.esm-bundler.js",
       "file": "vue.js",
-      "fileHash": "d13c72c6",
+      "fileHash": "a45fe566",
+      "needsInterop": false
+    },
+    "vitepress > @vue/devtools-api": {
+      "src": "../../../../../node_modules/.pnpm/@vue+devtools-api@7.6.4/node_modules/@vue/devtools-api/dist/index.js",
+      "file": "vitepress___@vue_devtools-api.js",
+      "fileHash": "3f512d8b",
+      "needsInterop": false
+    },
+    "vitepress > @vueuse/core": {
+      "src": "../../../../../node_modules/.pnpm/@vueuse+core@11.2.0_vue@3.5.13_typescript@4.9.5_/node_modules/@vueuse/core/index.mjs",
+      "file": "vitepress___@vueuse_core.js",
+      "fileHash": "781747ba",
       "needsInterop": false
     },
     "element-plus": {
-      "src": "../../../../node_modules/element-plus/es/index.mjs",
+      "src": "../../../../../node_modules/.pnpm/element-plus@2.8.8_vue@3.5.13_typescript@4.9.5_/node_modules/element-plus/es/index.mjs",
       "file": "element-plus.js",
-      "fileHash": "53760188",
+      "fileHash": "1baec226",
       "needsInterop": false
     },
     "@vitepress-demo-preview/component": {
-      "src": "../../../../node_modules/@vitepress-demo-preview/component/dist/preview-component.js",
+      "src": "../../../../../node_modules/.pnpm/@vitepress-demo-preview+component@2.3.2_vitepress@1.5.0_@algolia+client-search@5.14.2_@types+_hs7e4lzam3righ52mrnyti6jwm/node_modules/@vitepress-demo-preview/component/dist/preview-component.js",
       "file": "@vitepress-demo-preview_component.js",
-      "fileHash": "08fc48ae",
+      "fileHash": "2e220d27",
       "needsInterop": false
     },
     "elements-plus-plus": {
-      "src": "../../../../node_modules/elements-plus-plus/index.es.js",
+      "src": "../../../../../node_modules/.pnpm/elements-plus-plus@1.0.6/node_modules/elements-plus-plus/index.es.js",
       "file": "elements-plus-plus.js",
-      "fileHash": "246b0a43",
+      "fileHash": "e9a25720",
       "needsInterop": false
     }
   },
   "chunks": {
-    "chunk-VICCEG2L": {
-      "file": "chunk-VICCEG2L.js"
+    "chunk-NGQM644C": {
+      "file": "chunk-NGQM644C.js"
+    },
+    "chunk-ZBDU74J2": {
+      "file": "chunk-ZBDU74J2.js"
+    },
+    "chunk-5WRI5ZAA": {
+      "file": "chunk-5WRI5ZAA.js"
     }
   }
 }

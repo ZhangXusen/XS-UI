@@ -133,7 +133,7 @@ importers:
         specifier: ^2.3.2
         version: 2.3.2(vitepress@1.5.0(@algolia/client-search@5.14.2)(@types/node@22.9.0)(async-validator@4.2.5)(postcss@8.4.49)(sass@1.81.0)(search-insights@2.17.3)(terser@5.36.0)(typescript@4.9.5))(vue@3.5.13(typescript@4.9.5))
       '@vitepress-demo-preview/plugin':
-        specifier: ^1.2.2
+        specifier: ^1.2.3
         version: 1.2.3(markdown-it-container@3.0.0)(vitepress@1.5.0(@algolia/client-search@5.14.2)(@types/node@22.9.0)(async-validator@4.2.5)(postcss@8.4.49)(sass@1.81.0)(search-insights@2.17.3)(terser@5.36.0)(typescript@4.9.5))(vue@3.5.13(typescript@4.9.5))
       element-plus:
         specifier: ^2.2.12
@@ -246,6 +246,9 @@ importers:
       '@element-plus-plus/business-components':
         specifier: workspace:*
         version: link:../packages/business-components
+      '@element-plus-plus/style':
+        specifier: workspace:*
+        version: link:../packages/style
       '@element-plus/icons-vue':
         specifier: ^2.1.0
         version: 2.3.1(vue@3.5.13(typescript@4.9.5))

@@ -36,7 +36,8 @@
     "vue-router": "^4.0.13",
     "wangeditor": "^4.7.15",
     "@element-plus-plus/business-components": "workspace:*",
-    "@element-plus-plus/base-components": "workspace:*"
+    "@element-plus-plus/base-components": "workspace:*",
+    "@element-plus-plus/style": "workspace:*"
   },
   "devDependencies": {
     "@typescript-eslint/eslint-plugin": "^5.57.0",
